@@ -2,9 +2,9 @@
 class Single
   attr_reader :name, :desirability, :fussiness
 
-  def initialize(gender, name, desirability, sought_desirability, hobbies, fussiness)
-    @gender, @name, @desirability, @sought_desirability, @fussiness = gender, name, desirability, sought_desirability, fussiness
-    @hobbies =[hobbies]
+  def initialize(name, desirability, sought_desirability, hobbies)
+    @gender, @name, @desirability, @sought_desirability, @hobbies = name, desirability, sought_desirability, hobbies
+    @fussiness = fussiness
   end
 
   def match?(other, avg_desirability_other_singles)
@@ -15,13 +15,9 @@ class Single
     "#{@gender}, #{@name}, #{@desirability}, #{@sought_desirability}, #{@hobbies}"
   end
 
-  def gender=(gender)
-    @gender = gender
-  end
-
-  def aga
-
-  end
+  def fussiness
+    @sought_desirability - @desirability
+    end
   end
 
    		    	

@@ -15,8 +15,8 @@ class DatingAgency
 
   def match
     i = 0
+    organize_by_fussiness
     while i < @singles_list.size/2
-      organize_by_fussiness
       single1 = @singles_list[i]
       single2 = @singles_list[-i-1]
       date = Date.new(single1, single2)
@@ -29,7 +29,7 @@ class DatingAgency
   end
 
   def organize_by_fussiness
-    @singles_list.sort_by {|single| [single.fussiness]}
+    @singles_list.sort_by {|single| [single.fussiness, single.name]}
     end
   def to_s
     str = "Couples:\n"
