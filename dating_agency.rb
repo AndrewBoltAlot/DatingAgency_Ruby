@@ -1,7 +1,8 @@
-
+require_relative 'aga.rb'
 require_relative 'single.rb'
 require_relative 'couple.rb'
 require_relative 'date.rb'
+
 
 class DatingAgency
   def initialize
@@ -15,7 +16,7 @@ class DatingAgency
 
   def match
     i = 0
-    organize_by_fussiness
+
     while i < @singles_list.size/2
       single1 = @singles_list[i]
       single2 = @singles_list[-i-1]
@@ -30,7 +31,8 @@ class DatingAgency
 
   def organize_by_fussiness
     @singles_list.sort_by {|single| [single.fussiness, single.name]}
-    end
+  end
+
   def to_s
     str = "Couples:\n"
     @couples_list.each do |couple|

@@ -1,21 +1,19 @@
+require_relative 'single.rb'
 class Aga < Single
   def initialize(name,desirability, sought_desirability, hobbies)
     super(name,desirability, sought_desirability, hobbies)
   end
 
   def match?(other, avg_desirability_other_singles)
-    f1 = sharedHobbies(other)
-    if sharedHobbies(other)
-      f1 = true
-    else
-      f1
-    end
-
+      if shared_hobbies(other)
+        other.desirability += ((other.hobbies).intersection(@hobbies)).length
+      else
+          false
+      end
   end
 
-  def sharedHobbies(other)
+  def shared_hobbies(other)
     ((other.hobbies).intersection(@hobbies)).length.positive?
   end
-
-  end
+end
 
