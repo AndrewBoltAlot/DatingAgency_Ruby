@@ -6,7 +6,7 @@ class Aga < Single
 
   def match?(other, avg_desirability_other_singles)
       if shared_hobbies(other)
-        other.desirability += ((other.hobbies).intersection(@hobbies)).length
+        other.desirability += ((other.hobbies & @hobbies).length).to_i
       else
           false
       end

@@ -5,24 +5,19 @@ class Zin < Single
   end
 
   def match?(other, avg_desirability_other_singles)
-=begin
     f1 = super(other, avg_desirability_other_singles)
     f2 = false
-=end
     if other.class == "Aga"
       other.desirability += shared_hobbies.to_i
-      super(other,avg_desirability_other_singles)
+      f2 = super(other,avg_desirability_other_singles)
     else
       false
     end
-
-=begin
-    if f1 && f2
+    if f1 & f2
       true
     else
       false
     end
-=end
   end
 
   def shared_hobbies(other)
