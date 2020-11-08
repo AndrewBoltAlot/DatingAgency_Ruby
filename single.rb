@@ -1,6 +1,7 @@
    		    	
 class Single
-  attr_reader :name, :desirability, :fussiness, :hobbies
+  attr_reader :name, :hobbies, :fussiness
+  attr_accessor :desirability
 
   def initialize(name, desirability, sought_desirability, hobbies)
     @name, @desirability, @sought_desirability, @hobbies = name, desirability, sought_desirability, hobbies
