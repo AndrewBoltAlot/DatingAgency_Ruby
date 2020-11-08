@@ -18,4 +18,6 @@ class Zin < Single
     (other.hobbies & @hobbies).length
   end
 
+
+
 end

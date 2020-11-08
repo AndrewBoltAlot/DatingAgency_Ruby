@@ -31,8 +31,7 @@ class DatingAgency
 
   def organize_by_fussiness
     p "#{@singles_list}\n"
-    @singles_list.sort_by {|single| [single.fussiness]}
-
+    @singles_list.sort_by!{|single| [single.fussiness, single.name]}
   end
 
   def to_s
