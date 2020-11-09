@@ -7,7 +7,6 @@ class Zin < Single
 
   def match?(other, avg_desirability_other_singles)
     if other.is_a?(Aga)
-      other.desirability += shared_hobbies(other).to_i
       super(other,avg_desirability_other_singles)
     else
       false
@@ -15,9 +14,7 @@ class Zin < Single
   end
 
   def shared_hobbies(other)
-    (other.hobbies & @hobbies).length
+    ((other.hobbies).intersection(@hobbies)).length
   end
-
-
-
 end
+

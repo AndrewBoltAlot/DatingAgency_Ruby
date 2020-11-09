@@ -6,7 +6,6 @@ class Aga < Single
 
   def match?(other, avg_desirability_other_singles)
       if shared_hobbies(other) > 0
-        other.desirability += shared_hobbies(other).to_i
         super(other,avg_desirability_other_singles)
       else
           false
