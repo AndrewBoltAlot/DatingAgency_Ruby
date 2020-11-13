@@ -2,9 +2,9 @@ z Reese 8 8 music sport
 a Jamie 6 7 sport art
 z Leslie 7 8 art sport music
 a James 5 6 art music
-a Alex 9 8 sport
+a Alex 9 8 sport music
 a Billie 5 5 sport art music
 z Quinn 6 6 art
 z Kyle 7 8 music
 a Kai 7 6 art music
-a Rory 9 8 music art sport
+a Rory 7 6 music art sport

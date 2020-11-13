@@ -7,7 +7,9 @@ class Zin < Single
 
   def match?(other, avg_desirability_other_singles)
     if other.is_a?(Aga)
-      super(other,avg_desirability_other_singles)
+      bd = other.clone
+      bd.desirability += shared_hobbies(other).to_i
+      super(bd, avg_desirability_other_singles)
     else
       false
     end
