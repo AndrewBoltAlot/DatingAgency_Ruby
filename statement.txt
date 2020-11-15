@@ -1,0 +1,25 @@
+Statement:
+
+All works correctly
+
+Unit tests need more work
+
+Detailed Statement:
+
+Added the Aga and Zin subclasses of the Single super class
+Introduced logic for the specific subclasses in regards to match? method.
+In zin class, cloned instance of Aga when they on a date, so change to desirability is not permanent.
+
+In Single intizialized a variable called fussiness that is based on the method fussiness.
+Method fussiness is @sought_desirability - @desirability
+gave desirability and attr_accessor, so that it could be changed within the Zin class.
+
+This is then called upon in the dating agency class, with the method organize_by_fussiness
+organize_by_fussiness method is used to sort the single list according to fussiness then name
+This method is then called before the while loop in the match method within the Dating Agency class.
+
+In the main.rb an if, while loop is created to find out how many hobbies a Single has and to store them within an array of hobbies.
+Furthermore, instead of creating an instance of a single class for each person, an instance of either an Aga or Zin class is created
+based on if their gender is either 'a' or 'z'.
+
+

@@ -1,6 +1,6 @@
    		    	
 class Single
-  attr_reader :name, :hobbies, :fussiness
+  attr_reader :name, :hobbies, :fussiness, :sought_desirability
   attr_accessor :desirability
 
 
@@ -11,10 +11,6 @@ class Single
 
   def match?(other, avg_desirability_other_singles)
       other.desirability >= @sought_desirability || other.desirability > avg_desirability_other_singles
-  end
-
-  def shared_hobbies(other)
-    ((other.hobbies).intersection(@hobbies)).length
   end
 
   def to_s
